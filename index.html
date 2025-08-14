@@ -6069,7 +6069,7 @@
         });
 
 // Google Apps Script URL
-        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby1N4GLS0opwYzLIfe-rY6ecxJeep9O7uisM4WkQm9hDhRGHLODPJbTw_9P6oWtF8KP/exec';
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz7FESkyoLWXPVqXpGCF0NiYmG1VpLysHl9dUXbSOURQ9511dvR3WHp-4Q8f2ONFmmc/exec';
         
         // Sample order data (fallback)
         let orders = {
@@ -6444,7 +6444,7 @@
                             address: order.address || '',
                             deliveryType: order.deliveryType || 'Pos',
                             status: order.status || 'Pending',
-                            date: order.timestamp || '', // Ambil dari kolum Timestamp
+                            date: order.date || '', // Ambil dari kolum Timestamp
                             books: order.books ? 
                                 order.books.split('\n').filter(book => book.trim()).map(book => ({ title: book.trim(), quantity: 1 })) : 
                                 [{ title: 'No books listed', quantity: 1 }],
@@ -6536,6 +6536,7 @@
     </script>
 </body>
 </html>
+
 
 
 
